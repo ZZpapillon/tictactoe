@@ -219,7 +219,7 @@ const gameBoard = (() =>  {
                 }
                 game.value = 1
             } 
-            if (fields.every(field => field.textContent !== "")) {
+            if (fields.every(field => field.textContent !== "" && game.value === 0)) {
                 let container = document.querySelector('.container')
                 container.style.opacity = 0.05
                 let winner = document.querySelector('.winner')
